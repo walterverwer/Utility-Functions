@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: walpy
+Version: 0.0.1
+Summary: General functions for Python
+Home-page: UNKNOWN
+Author: Walter Verwer
+Author-email: https://github.com/walterverwer/walpy
+License: UNKNOWN
+Description: General functions for Python: for work in both Python and in Notebooks!
+Keywords: python,walpy
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
