@@ -1,6 +1,6 @@
 import rpy2.robjects.packages as rpackages
 from rpy2.robjects.vectors import StrVector
-from .suppress import suppress
+from walpy import suppress
 
 def r_importer(modules, install_only=None, log=False):
   """
@@ -36,9 +36,9 @@ def r_importer(modules, install_only=None, log=False):
   if len(names_to_install) > 0 and log == True:
     utils.install_packages(StrVector(names_to_install),
                             repos='https://cloud.r-project.org/')
-    print('Successfully  auto installed:', names_to_install)
+    print('Successfully installed:', names_to_install)
   
-  else:
+  elif len(names_to_install) > 0:
     with suppress():
       utils.install_packages(StrVector(names_to_install),
                              repos='https://cloud.r-project.org/')
@@ -52,6 +52,6 @@ def r_importer(modules, install_only=None, log=False):
   
   # Print log message if true:
   if log == True:
-    print('Successfully auto imported:', [i for i in modules])
+    print('Successfully imported:', [i for i in modules])
  
   return
