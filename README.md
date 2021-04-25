@@ -1,2 +1,2 @@
 # Readme walpy
-In this notebook I have writen general (short) functions for every day use.
+Walpy is a general purpose package containing '30-second-functions'.
