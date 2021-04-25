@@ -2,7 +2,7 @@ import rpy2.robjects.packages as rpackages
 from rpy2.robjects.vectors import StrVector
 from walpy import suppress
 
-def r_importer(modules, install_only=None, log=False):
+def r_importer(modules, install_only=[], log=False):
   """
   Import and install R packages. If the desired packages are not installed it will
   automatically install them. Note that this function will act as a one time
