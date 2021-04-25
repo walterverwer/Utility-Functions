@@ -39,12 +39,6 @@ def r_importer(modules, install_only=None, log=False):
                             repos='https://cloud.r-project.org/')
     print('Successfully installed:', names_to_install)
   
-  elif len(names_to_install) > 0:
-    print('Installing:', names_to_install)
-    with suppress():
-      utils.install_packages(StrVector(names_to_install),
-                             repos='https://cloud.r-project.org/')
-  
   # Make modules non-overlapping with install_only:
   modules = set(modules) - set(install_only)
  
