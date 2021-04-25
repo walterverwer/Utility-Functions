@@ -1,29 +1,27 @@
-from setuptools import setup, find_packages
-
-VERSION = '0.0.1' 
-DESCRIPTION = 'General functions for Python'
-LONG_DESCRIPTION = 'General functions for Python: for work in both Python and in Notebooks!'
-
-# Setting up
+from distutils.core import setup
 setup(
-       # the name must match the folder name 'verysimplemodule'
-        name='walpy', 
-        version=VERSION,
-        author='Walter Verwer',
-        author_email='https://github.com/walterverwer/walpy',
-        description=DESCRIPTION,
-        long_description=LONG_DESCRIPTION,
-        packages=find_packages(),
-        install_requires=['rpy2'], # add any additional packages that 
-        # needs to be installed along with your package. Eg: 'caer'
-        
-        keywords=['python', 'walpy'],
-        classifiers= [
-            "Development Status :: 3 - Alpha",
-            "Intended Audience :: Education",
-            "Programming Language :: Python :: 2",
-            "Programming Language :: Python :: 3",
-            "Operating System :: MacOS :: MacOS X",
-            "Operating System :: Microsoft :: Windows",
-        ]
+  name = 'walpy',         # How you named your package folder (MyLib)
+  packages = ['walpy'],   # Chose the same as "name"
+  version = '0.1',      # Start with a small number and increase it with every change you make
+  license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
+  description = 'General functions',   # Give a short description about your library
+  author = 'Walter Verwer',                   # Type in your name
+  author_email = 'walterverwer@gmail.com',      # Type in your E-Mail
+  url = 'https://github.com/walterverwer/walpy',   # Provide either the link to your github or to your website
+  download_url = 'https://github.com/walterverwer/walpy/archive/refs/tags/v_0.1.tar.gz',    # I explain this later on
+  keywords = ['SOME', 'MEANINGFULL', 'KEYWORDS'],   # Keywords that define your package best
+  install_requires=[            # I get to this in a second
+          'rpy2',
+          'IPython',
+      ],
+  classifiers=[
+    'Development Status :: 3 - Alpha',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
+    'Intended Audience :: Developers',      # Define that your audience are developers
+    'Topic :: Software Development :: Build Tools',
+    'License :: OSI Approved :: MIT License',   # Again, pick a license
+    'Programming Language :: Python :: 3',      #Specify which pyhton versions that you want to support
+    'Programming Language :: Python :: 3.4',
+    'Programming Language :: Python :: 3.5',
+    'Programming Language :: Python :: 3.6',
+  ],
 )
