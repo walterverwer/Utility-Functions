@@ -1,10 +1,14 @@
 from distutils.core import setup
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
 setup(
   name = 'walpy',         # How you named your package folder (MyLib)
   packages = ['walpy'],   # Chose the same as "name"
   version = '0.1',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'General functions',   # Give a short description about your library
+  long_description=long_description,
+  long_description_content_type="text/markdown",
   author = 'Walter Verwer',                   # Type in your name
   author_email = 'walterverwer@gmail.com',      # Type in your E-Mail
   url = 'https://github.com/walterverwer/walpy',   # Provide either the link to your github or to your website
