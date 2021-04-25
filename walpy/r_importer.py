@@ -33,7 +33,7 @@ def r_importer(modules, install_only=None, log=False):
  
   # Selectively install what needs to be install. Use CRAN cloud server:
   names_to_install = [x for x in packnames if not rpackages.isinstalled(x)]
-  if len(names_to_install) > 0 and log == True:
+  if len(names_to_install) > 0:
     print('Installing:', names_to_install)
     utils.install_packages(StrVector(names_to_install),
                             repos='https://cloud.r-project.org/')
