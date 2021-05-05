@@ -25,6 +25,12 @@ def r_importer(modules, install_only=[], log=False):
   Returns:
       None
   """
+  if not isinstance(modules, list):
+      modules = [modules]
+  
+  if not isinstance(install_only, list):
+      install_only = [install_only]
+      
   # import R's utility package:
   utils = rpackages.importr('utils')
  
