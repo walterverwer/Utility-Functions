@@ -1,6 +1,6 @@
+import walpy
 import rpy2.robjects.packages as rpackages
 from rpy2.robjects.vectors import StrVector
-from walpy import suppress
 
 def r_importer(modules, install_only=[], log=False):
   """
@@ -25,6 +25,12 @@ def r_importer(modules, install_only=[], log=False):
   Returns:
       None
   """
+  if not isinstance(modules, list):
+      modules = [modules]
+  
+  if not isinstance(install_only, list):
+      install_only = [install_only]
+      
   # import R's utility package:
   utils = rpackages.importr('utils')
  
@@ -35,7 +41,8 @@ def r_importer(modules, install_only=[], log=False):
   names_to_install = [x for x in packnames if not rpackages.isinstalled(x)]
   if len(names_to_install) > 0:
     print('Installing:', names_to_install)
-    utils.install_packages(StrVector(names_to_install),
+    with walpy.suppress():
+        utils.install_packages(StrVector(names_to_install),
                             repos='https://cloud.r-project.org/')
     print('Successfully installed:', names_to_install)
   
