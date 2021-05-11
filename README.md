@@ -8,8 +8,4 @@ _R to Python installer and importer. When importing R packages while working in 
 
 
 ### suppress(object)
-_Use this function to suppress output. Use case example:_
-
-_with suppress():_
-
-  _print('I want to suppress this!')_
+_Use this function to suppress output. Simply use Python's 'with' function in combination with 'suppress()'._
