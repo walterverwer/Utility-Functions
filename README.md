@@ -18,4 +18,3 @@ _Use this function to suppress output. Simply use Python's 'with' function in co
 
 ### write_run(line, cell)
 _This function is jupyter notebook specific. It allows the user to write and run a specific cell to a python (.py) script. Simply use %%write_run <file_name.py> at the top of the cell._
-
