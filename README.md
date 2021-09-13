@@ -13,22 +13,15 @@ _R to Python installer and importer. When importing R packages while working in 
 
 _Example of r_importer(modules, install_only=[], log=False):_
 ```python
-# First import the following rpy2 module for manual importing:
-import rpy2.robjects.packages
- 
-# Modules to be installed:
-modules = ['dplyr', 'tidyverse'] # This is correct!
-modules = ['dplyr', 'tidyverse','sandwich', 'stargazer'] # This is also correct!
-install_only = ['sandwich', 'stargazer'] # What to install only
+# Define R modules to be installed and imported
+modules = ['stargazer', 'sandwich']
+
+# R modules that are only installed and thus not imported!
+install_only = ['dplyr', 'tidyverse']
 
 # Run the R importer function
 r_importer(modules, install_only)
-
-# Assign packages of the manual installs to the Python environment:
-sandwich = rpy2.robjects.packages.importr('sandwich') 
-stargazer =  rpy2.robjects.packages.importr('stargazer')
 ```
-
 
 ### suppress(object)
 _Use this function to suppress output. Simply use Python's 'with' function in combination with 'suppress()'._
