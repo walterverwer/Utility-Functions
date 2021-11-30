@@ -1,5 +1,5 @@
 # Readme walpy
-Walpy is a general purpose package containing '30-second-functions'.
+Walpy is a general purpose package.
 
 ## Dependencies
 Currently the package depends on: rpy2.
